@@ -69,6 +69,7 @@ export default new Vue({
                 dataType: 'json',
                 success: this.fetched,
                 error: this.failed,
+                cache: false,
             })
         },
 

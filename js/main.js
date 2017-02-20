@@ -198,7 +198,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 url: url,
                 dataType: 'json',
                 success: this.fetched,
-                error: this.failed
+                error: this.failed,
+                cache: false
             });
         },
         fetched: function fetched(_ref) {
