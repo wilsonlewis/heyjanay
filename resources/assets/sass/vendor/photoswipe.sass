@@ -1,0 +1,38 @@
+.pswp__caption__center
+  text-align: center
+  color: '$slideshow_caption_color' !important
+  +touch
+    color: '$slideshow_caption_color_touch' !important
+
+.pswp__button--arrow--left,
+.pswp__button--arrow--right
+  opacity: '$slideshow_arrow_opacity' !important
+  +touch
+    opacity: '$slideshow_arrow_opacity_touch' !important
+
+
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before
+  background-color: '$slideshow_arrow_color' !important
+  +touch
+    background-color: '$slideshow_arrow_color_touch' !important
+
+.pswp--svg
+  @media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx)
+    .pswp__button--close,
+    .pswp__button--arrow--left:before,
+    .pswp__button--arrow--right:before
+      background-image: url('/css/photoswipe/[$slideshow_skin]/[$slideshow_skin].svg') !important
+      +touch
+        background-image: url('/css/photoswipe/[$slideshow_skin_touch]/[$slideshow_skin_touch].svg') !important
+
+.pswp__top-bar,
+.pswp__caption
+  background-color: rgba(0,0,0,0) !important
+  +touch
+    background-color: '$slideshow_bar_color' !important
+
+.pswp--zoom-allowed .pswp__img
+  cursor: default !important
+
+

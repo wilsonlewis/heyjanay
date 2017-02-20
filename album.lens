@@ -1,0 +1,5 @@
+<koken:if data="location.parameters.json" equals="1">
+    <koken:include file="resources/views/albums/show.json" />
+<koken:else>
+	<koken:include file="resources/views/albums/show.html" />
+</koken:if>

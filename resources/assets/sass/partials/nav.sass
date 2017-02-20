@@ -1,0 +1,45 @@
+#main
+  align-items: baseline
+  .fill
+    flex: 1
+    border-top: 1px solid '$nav_divider_color'
+    padding-bottom: 2px
+  .k-nav-list
+    display: flex
+    justify-content: center
+    +tablet
+      padding-left: $spacing
+      padding-right: $spacing
+    +mobile
+      flex-wrap: wrap
+    .k-nav-current
+      color: '$nav_active_color'
+      border-bottom-color: '$nav_underline_color'
+      &:hover
+        color: '$nav_active_color_hover'
+    li
+      & + li
+        +mobile
+          margin-left: '[$nav_spacing_mobile]px'
+        margin-left: '[$nav_spacing]px'
+    a
+      +mobile
+        height: '[$nav_height_mobile]px'
+        font-size: '[$nav_size_mobile]px'
+        font-weight: '$nav_weight_mobile'
+        letter-spacing: '[$nav_kerning_mobile]px'
+        text-transform: '$nav_case_mobile'
+      color: '$nav_color'
+      height: '[$nav_height]px'
+      display: flex
+      font-size: '[$nav_size]px'
+      align-items: center
+      font-weight: '$nav_weight'
+      border-bottom: 1px solid transparent
+      letter-spacing: '[$nav_kerning]px'
+      text-transform: '$nav_case'
+      &:hover
+        color: '$nav_color_hover'
+
+
+

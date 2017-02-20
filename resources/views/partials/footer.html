@@ -1,0 +1,12 @@
+<modal :open="active">
+    <slideshow v-if="slideshow" :slideshow="slideshow" @close="close"></slideshow>
+</modal>
+
+<div id="footer" class="section">
+    <nav id="links">
+        <koken:navigation group="links" />
+    </nav>
+    <nav id="icons">
+        <koken:navigation group="icons" />
+    </nav>
+</div> 

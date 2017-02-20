@@ -1,0 +1,34 @@
+form,
+.form,
+.k-contact-form
+  .k-contact-form-submit
+    text-align: center
+  .k-contact-form-error
+    position: relative
+    &:after
+      content: "required"
+      color: red
+      position: absolute !important
+      right: 0.75em
+      top: 0.75em
+  fieldset
+    border: none
+    outline: none
+    & + fieldset
+      border-top: 1px solid $white-bis
+  label
+    display: none
+  textarea,
+  input[type="text"],
+  input[type="email"]
+    &::-webkit-input-placeholder
+        color: $grey-lighter
+    color: $grey
+    font-size: 14px
+    width: 100%
+    resize: none
+    border: none
+    padding: 12px 6px
+    outline: none
+    font-family: $family-primary
+    background-color: transparent

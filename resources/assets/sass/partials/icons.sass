@@ -1,0 +1,21 @@
+#icons
+  .k-nav-list
+    display: flex
+    justify-content: center
+    li
+      & + li
+        margin-left: '[$icons_spacing]px'
+        +mobile
+          margin-left: '[$icons_spacing_mobile]px'
+    a
+      +mobile
+        height: '[$icons_height_mobile]px'
+        font-size: '[$icons_size_mobile]px'
+      color: '$icons_color'
+      height: '[$icons_height]px'
+      display: flex
+      font-size: '[$icons_size]px'
+      align-items: center
+      &:hover
+        color: '$icons_color_hover'
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <koken:meta />
+    <koken:title />
+    <koken:include file="resources/views/partials/styles.html" />
+</head>
+<body>
+    <div id="container">
+        <koken:include file="resources/views/partials/header.html" />
+        <koken:load>
+            <koken:include file="resources/views/galleries/show.meta" />
+            <main class="section">
+                <div id="gallery">
+                    <koken:loop>
+                        <koken:variable name="slideshow_url" value="{{ album.url }}" />
+                        <h1 class="title">
+                            <koken:link title="View {{ album.title }}">
+                                {{ album.title }}
+                            </koken:link>
+                        </h1>
+                        <div class="columns is-mobile is-gapless">
+                            <koken:covers minimum="4" limit="4">
+                                <koken:loop>
+                                    <div class="column">
+                                        <koken:include file="resources/views/partials/image.html" />
+                                    </div>
+                                </koken:loop>
+                            </koken:covers>
+                        </div>
+                    </koken:loop>
+                </div>
+            </main>
+        </koken:load>
+        <koken:include file="resources/views/partials/footer.html" />
+    </div>
+    <koken:include file="resources/views/partials/scripts.html" />
+</body>
+</html>
+
+
+
+
+

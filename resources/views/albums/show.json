@@ -1,0 +1,26 @@
+<koken:load limit="0">
+    <koken:variable name="image_count" value="{{ count }}" />
+    {
+        "id": {{ album.id }},
+        "slug": "{{ album.slug }}",
+        "title": "{{ album.title }}",
+        "description": "{{ album.description }}",
+        "images": [
+            <koken:loop>
+                {
+                    "id": {{ content.id }},
+                    "pid": "{{ content.slug }}",
+                    "msrc": "{{ content.presets.small.url }}",
+                    "src": "{{ content.presets.large.url }}",
+                    "w": {{ content.width }},
+                    "h": {{ content.height }},
+                    "title": "{{ content.title }}",
+                    "description": "{{ content.description }}"
+                }
+                <koken:if condition="{{ image_count }} - 1 != {{ index }}">
+                    ,
+                </koken:if>
+            </koken:loop>
+        ]
+    }
+</koken:load>

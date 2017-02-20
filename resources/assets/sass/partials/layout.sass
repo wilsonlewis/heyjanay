@@ -1,0 +1,23 @@
+#container
+  margin-top: '[$body_top]px'
+  margin-bottom: '[$body_bottom]px'
+  +mobile
+    margin-top: '[$body_top_mobile]px'
+    margin-bottom: '[$body_bottom_mobile]px'
+
+#footer
+  margin-top: '[$body_bottom]px'
+  +mobile
+    margin-top: '[$body_bottom_mobile]px'
+
+.section
+  margin: 0 auto
+  max-width: '[$max_width]px'
+
+.container
+  .section > &
+    margin-top: 28px
+  background: white
+  padding: 56px
+  +mobile
+    padding: 28px

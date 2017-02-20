@@ -1,0 +1,23 @@
+#album
+  background: '$images_background_color.album'
+  margin-top: '[$images_offset.album]px'
+  padding-top: '[$images_top.album]px'
+  padding-left: '[$images_left.album]px'
+  padding-right: '[$images_right.album]px'
+  padding-bottom: '[$images_bottom.album]px'
+  +mobile
+    margin-top: '[$images_offset_mobile.album]px'
+    padding-top: '[$images_top_mobile.album]px'
+    padding-left: '[$images_left_mobile.album]px'
+    padding-right: '[$images_right_mobile.album]px'
+    padding-bottom: '[$images_bottom_mobile.album]px'
+  .column
+    &:not(:last-child)
+      margin-right: '[$images_spacing_horizontal.album]px'
+      +mobile
+        margin-right: '[$images_spacing_horizontal_mobile.album]px'
+  .columns
+    &:not(:last-child)
+      margin-bottom: '[$images_spacing_vertical]px'
+      +mobile
+        margin-bottom: '[$images_spacing_vertical_mobile]px'

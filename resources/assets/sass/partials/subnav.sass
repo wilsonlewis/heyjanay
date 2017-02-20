@@ -1,0 +1,41 @@
+#sub
+  margin-top: 16px
+  align-items: baseline
+  +mobile
+    margin-top: 16px
+  .k-nav-list
+    display: flex
+    justify-content: center
+    +tablet
+      padding-left: $spacing
+      padding-right: $spacing
+    +mobile
+      flex-wrap: wrap
+    .k-nav-current
+      color: '$subnav_active_color'
+      border-bottom-color: '$subnav_underline_color'
+      &:hover
+        color: '$subnav_active_color_hover'
+    li
+      & + li
+        +mobile
+          margin-left: '[$subnav_spacing_mobile]px'
+        margin-left: '[$subnav_spacing]px'
+    a
+      +mobile
+        height: '[$subnav_height_mobile]px'
+        font-size: '[$subnav_size_mobile]px'
+        font-weight: '$subnav_weight_mobile'
+        letter-spacing: '[$subnav_kerning_mobile]px'
+        text-transform: '$subnav_case_mobile'
+      color: '$subnav_color'
+      height: '[$subnav_height]px'
+      display: flex
+      font-size: '[$subnav_size]px'
+      align-items: center
+      font-weight: '$subnav_weight'
+      border-bottom: 1px solid transparent
+      letter-spacing: '[$subnav_kerning]px'
+      text-transform: '$subnav_case'
+      &:hover
+        color: '$subnav_color_hover'

@@ -1,0 +1,22 @@
+
+.image
+  display: block
+  position: relative
+  img
+    width: 100%
+    height: auto
+    display: block
+    &.k-lazy-loading
+      background-size: 20px 20px
+      background-image: url('/css/photoswipe/default-skin/preloader.gif')
+      background-repeat: no-repeat
+      background-position: 50%
+  &.is-square,
+  &.is-1by1
+    img
+      +overlay
+      width: 100%
+      height: 100%
+  &.is-square,
+  &.is-1by1
+    padding-top: 100%

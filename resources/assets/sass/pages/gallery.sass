@@ -1,0 +1,48 @@
+#gallery
+  background: '$images_background_color.set'
+  margin-top: '[$images_offset.set]px'
+  padding-top: '[$images_top.set]px'
+  padding-left: '[$images_left.set]px'
+  padding-right: '[$images_right.set]px'
+  padding-bottom: '[$images_bottom.set]px'
+  +mobile
+    margin-top: '[$images_offset_mobile.set]px'
+    padding-top: '[$images_top_mobile.set]px'
+    padding-left: '[$images_left_mobile.set]px'
+    padding-right: '[$images_right_mobile.set]px'
+    padding-bottom: '[$images_bottom_mobile.set]px'
+  .title
+    +mobile
+      text-align: '$images_title_align_mobile'
+      padding-left: '[$images_title_offset_mobile]px'
+      padding-right: '[$images_title_offset_mobile]px'
+    width: 100%
+    text-align: '$images_title_align'
+    padding-left: '[$images_title_offset]px'
+    padding-right: '[$images_title_offset]px'
+    border-bottom: 1px solid '$images_underline_color'
+    & + .columns
+      margin-top: '[$images_spacing_top]px'
+      +mobile
+        margin-top: '[$images_spacing_top_mobile]px'
+  a
+    color: '$images_title_color'
+    height: '[$images_title_height]px'
+    font-size: '[$images_title_size]px'
+    font-weight: '$images_title_weight'
+    font-family: $family-special
+    letter-spacing: '[$images_title_kerning]px'
+    text-transform: uppercase
+    &:hover
+      color: '$images_title_color_hover'
+  .column
+    &:not(:last-child)
+      margin-right: '[$images_spacing_horizontal.set]px'
+      +mobile
+        margin-right: '[$images_spacing_horizontal_mobile.set]px'
+  .columns
+    & + .title
+      margin-top: '[$images_spacing_bottom]px'
+      +mobile
+        margin-top: '[$images_spacing_bottom_mobile]px'
+    

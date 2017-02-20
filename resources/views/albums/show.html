@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <koken:meta />
+    <koken:title />
+    <koken:include file="resources/views/partials/styles.html" />
+</head>
+<body>
+    <div id="container">
+        <koken:include file="resources/views/partials/header.html" />
+        <koken:load limit="0">
+            <koken:include file="resources/views/albums/show.meta" />
+            <koken:if condition="strpos($_SERVER[REQUEST_URI], 'albums/'.{{ album.slug }}) !== false">
+                <koken:variable name="album_url" value="{{ album.url }}" />
+            <koken:else>
+                <koken:variable name="album_url" value="/" />
+            </koken:if>
+            
+            <koken:categories>
+                <nav id="sub">
+                    <ul class="k-nav-list k-nav-root">
+                        <koken:loop>
+                            <li>
+                                <koken:if condition="strpos($_SERVER[REQUEST_URI], 'category:'.{{ category.id }}) !== false">
+                                    <koken:link title="{{ category.title }}" url="{{ album_url }}category:{{ category.id }}" class="k-nav-current">
+                                        {{ category.title }}
+                                    </koken:link>
+                                <koken:else>
+                                    <koken:link title="{{ category.title }}" url="{{ album_url }}category:{{ category.id }}">
+                                        {{ category.title }}
+                                    </koken:link>
+                                </koken:if>
+                            </li>
+                        </koken:loop>
+                    </ul>
+                </nav>
+            </koken:categories>
+            <main class="section">
+                <div id="album">
+                    <div class="columns is-mobile is-gapless">
+                        <koken:loop>
+                            <koken:if condition="{{ index }} % 3 == 0 && {{ index }} != 0">
+                                </div>
+                                <div class="columns is-mobile is-gapless">
+                            </koken:if>
+                            <div class="column">
+                                <koken:include file="resources/views/partials/image.html" />
+                            </div>
+                        </koken:loop>
+                        <koken:if condition="{{ count }} % 3 == 1">
+                            <div class="column"></div>
+                            <div class="column"></div>
+                        </koken:if>
+                        <koken:if condition="{{ count }} % 3 == 2">
+                            <div class="column"></div>
+                        </koken:if>
+                    </div>
+                </div>
+            </main>
+        </koken:load>
+        <koken:include file="resources/views/partials/footer.html" />
+    </div>
+    
+    <koken:include file="resources/views/partials/scripts.html" />
+</body>
+</html>

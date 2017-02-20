@@ -1,0 +1,29 @@
+#links
+  .k-nav-list
+    display: flex
+    justify-content: center
+    +mobile
+      align-items: center
+      flex-direction: column
+    li
+      & + li
+        +mobile
+          margin-top: '[$links_spacing_mobile]px'
+        +tablet
+          margin-left: '[$links_spacing]px'
+    a
+      +mobile
+        height: '[$links_height_mobile]px'
+        font-size: '[$links_size_mobile]px'
+        font-weight: '$links_weight_mobile'
+        letter-spacing: '[$links_kerning_mobile]px'
+      color: '$links_color'
+      height: '[$links_height]px'
+      display: flex
+      font-size: '[$links_size]px'
+      align-items: center
+      font-weight: '$links_weight'
+      letter-spacing: '[$links_kerning]px'
+      &:hover
+        color: '$links_color_hover'
+
