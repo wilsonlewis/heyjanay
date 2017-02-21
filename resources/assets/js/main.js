@@ -32,7 +32,7 @@ export default new Vue({
 
         if (hash.gid) {
             this.selection = hash.pid
-            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid)
+            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid + '/json:1')
         }
     },
 
@@ -60,16 +60,11 @@ export default new Vue({
         fetch(url) {
             this.loading = true
 
-            url = url.lastIndexOf('?') !== -1
-                ? url + '&json=1'
-                : url + '?json=1'
-
             window.$.ajax({
                 url: url,
                 dataType: 'json',
                 success: this.fetched,
                 error: this.failed,
-                cache: false,
             })
         },
 

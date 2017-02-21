@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <koken:meta />
     <koken:title />
+    <koken:include file="resources/views/partials/famicon.html" />
     <koken:include file="resources/views/partials/styles.html" />
 </head>
 <body>
@@ -13,6 +14,8 @@
         <koken:include file="resources/views/partials/header.html" />
         <koken:load limit="0">
             <koken:include file="resources/views/albums/show.meta" />
+            <koken:variable name="slideshow_url" value="{{ album.url }}" />
+
             <koken:if condition="strpos($_SERVER[REQUEST_URI], 'albums/'.{{ album.slug }}) !== false">
                 <koken:variable name="album_url" value="{{ album.url }}" />
             <koken:else>
@@ -25,6 +28,7 @@
                         <koken:loop>
                             <li>
                                 <koken:if condition="strpos($_SERVER[REQUEST_URI], 'category:'.{{ category.id }}) !== false">
+                                    <koken:variable name="slideshow_url" value="{{ slideshow_url }}category:{{ category.id }}/" />
                                     <koken:link title="{{ category.title }}" url="{{ album_url }}category:{{ category.id }}" class="k-nav-current">
                                         {{ category.title }}
                                     </koken:link>

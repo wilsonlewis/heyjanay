@@ -166,7 +166,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         if (hash.gid) {
             this.selection = hash.pid;
-            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid);
+            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid + '/json:1');
         }
     },
 
@@ -192,14 +192,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetch: function fetch(url) {
             this.loading = true;
 
-            url = url.lastIndexOf('?') !== -1 ? url + '&json=1' : url + '?json=1';
-
             window.$.ajax({
                 url: url,
                 dataType: 'json',
                 success: this.fetched,
-                error: this.failed,
-                cache: false
+                error: this.failed
             });
         },
         fetched: function fetched(_ref) {

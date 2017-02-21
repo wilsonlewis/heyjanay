@@ -1,4 +1,4 @@
-<koken:if data="location.parameters.json" equals="1">
+<koken:if condition="strpos($_SERVER[REQUEST_URI], 'json:1') !== false">
     <koken:include file="resources/views/albums/show.json" />
 <koken:else>
 	<koken:include file="resources/views/albums/show.html" />
