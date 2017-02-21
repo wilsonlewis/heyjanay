@@ -32,7 +32,7 @@ export default new Vue({
 
         if (hash.gid) {
             this.selection = hash.pid
-            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid + '/json:1')
+            this.fetch(window.location.origin + '/albums/' + hash.gid + '/json:1')
         }
     },
 

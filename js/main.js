@@ -166,7 +166,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         if (hash.gid) {
             this.selection = hash.pid;
-            this.fetch(window.location.origin + window.location.pathname + '?/albums/' + hash.gid + '/json:1');
+            this.fetch(window.location.origin + '/albums/' + hash.gid + '/json:1');
         }
     },
 
