@@ -60,6 +60,10 @@ export default new Vue({
         fetch(url) {
             this.loading = true
 
+            if (url.lastIndexOf(window.location.origin) == -1) {
+                url = url.replace(/(.*?)\.com/, window.location.origin)
+            }
+
             window.$.ajax({
                 url: url,
                 dataType: 'json',
