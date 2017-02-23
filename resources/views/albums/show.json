@@ -1,4 +1,4 @@
-<koken:load limit="0">
+<koken:load limit="9999999">
     <koken:variable name="image_count" value="{{ count }}" />
     {
         "id": {{ album.id }},
