@@ -37,6 +37,9 @@
             <main class="section">
                 {{ page.content }}
             </main>
+            <section class="section">
+                <instagram></instagram>
+            </section>
         </koken:load>
         <koken:include file="resources/views/partials/footer.html" />
     </div>

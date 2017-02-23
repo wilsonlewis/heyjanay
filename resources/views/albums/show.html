@@ -12,7 +12,7 @@
 <body>
     <div id="container">
         <koken:include file="resources/views/partials/header.html" />
-        <koken:load limit="0">
+        <koken:load limit="9999999">
             <koken:include file="resources/views/albums/show.meta" />
             <koken:variable name="slideshow_url" value="{{ album.url }}" />
 
@@ -65,7 +65,7 @@
                 </div>
             </main>
             <section class="section">
-                <instagram user="heyjanay"></instagram>
+                <instagram></instagram>
             </section>
         </koken:load>
         <koken:include file="resources/views/partials/footer.html" />

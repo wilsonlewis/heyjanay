@@ -1,6 +1,6 @@
 {
 	"name": "Heyjanay",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Minimal grid style Koken theme.",
 	"documentation": "https://github.com/wilsonlewis/heyjanay",
 	"author": {
@@ -18,7 +18,6 @@
 			"defaults": []
 		}
 	},
-
 	"settings": {
 		"Layout": {
 			"icon": "layout",
